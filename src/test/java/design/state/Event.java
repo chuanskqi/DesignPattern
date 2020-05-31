@@ -1,5 +1,8 @@
 package design.state;
 
+/**
+ * 定义马里奥遇见的事件
+ */
 public enum  Event {
     GOT_MUSHROOM(0),
     GOT_CAPE(1),

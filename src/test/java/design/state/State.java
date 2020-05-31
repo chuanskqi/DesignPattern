@@ -1,5 +1,8 @@
 package design.state;
 
+/**
+ * 当前马里奥的状态
+ */
 public enum State {
     SMALL(0),
     //火,
