@@ -27,7 +27,7 @@ public class Test {
 
     public static School get() {
         Student s = new Student();
-        s.setName("12");
+        s.setName("branch1");
         s.setAge("123");
         List<Student> list = new ArrayList<>();
         list.add(s);
