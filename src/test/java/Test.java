@@ -29,6 +29,8 @@ public class Test {
         Student s = new Student();
         s.setName("branch2");
         s.setAge("123");
+        //branch2
+        new String("master");
         List<Student> list = new ArrayList<>();
         list.add(s);
         School school = new School();
