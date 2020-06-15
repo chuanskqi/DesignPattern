@@ -17,17 +17,18 @@ public class BubboSort {
      * @return
      */
     public static int[] bubble(int[] array) {
-        for (int x = 0; x < array.length; x++) {
+
+        for (int i=0; i < array.length; i++) {
             boolean flag = false;
-            for (int y = 0; y < array.length - x - 1; y++) {
-                if (array[y] > array[y+1]) {
-                    int temp = array[y + 1];
-                    array[y+1] = array[y];
-                    array[y] = temp;
+            for (int j=0; j < array.length - i - 1; j++) {
+                if (array[j] > array[j+1]) {
+                    int temp = array[j+1];
+                    array[j+1] = array[j];
+                    array[j] = temp;
                     flag = true;
                 }
             }
-            if (flag) {return array;}
+            if (!flag) {return array;}
         }
         return array;
     }

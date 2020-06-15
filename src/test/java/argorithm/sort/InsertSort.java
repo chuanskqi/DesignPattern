@@ -1,5 +1,6 @@
 package argorithm.sort;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -14,6 +15,8 @@ public class InsertSort {
     }
 
     /**
+     * 把数组分为两段，一段是排序好的，一段是未排序的
+     * 将未排序的插入到排序段中
      * 时间复杂度O(n2)
      * 空间复杂度O(1)
      * @param array
@@ -22,22 +25,18 @@ public class InsertSort {
     public static int[] insertSort(int[] array) {
 
         for (int i = 1; i < array.length; i++) {
+            int j = i-1;
             int value = array[i];
-            int j = i - 1;
-            for (; j >= 0; j--) {
-                //从排序好的里面找到位置
-                //并移动数据
-                if (array[j] > value) {
-                    //大于value的前进一个
+            for (; j >= 0 ; j--) {
+                if (array[j]>value) {
                     array[j+1] = array[j];
                 } else {
+                    //array[j] <= value
                     break;
                 }
             }
-            //插入value  j+1上一步j--了
-            array[j+1] = value;
+            array[j + 1] = value;
         }
         return array;
-
     }
 }

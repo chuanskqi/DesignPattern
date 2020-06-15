@@ -5,7 +5,7 @@ package argorithm.sort;
  */
 public class MergeSort {
     public static void main(String[] args) {
-        int[] arr = new int[]{5,6,1,3,7,10,20,15};
+        int[] arr = new int[]{11,8,3,9,7,1,2,5};
 
         Solution solution = new Solution();
 
